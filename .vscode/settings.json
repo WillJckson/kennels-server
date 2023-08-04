@@ -3,5 +3,10 @@
         "python.linting.pylintEnabled": true,
         "python.analysis.diagnosticSeverityOverrides": {
           "reportGeneralTypeIssues": "none"
+        },
+        "workbench.colorCustomizations": {
+          "activityBar.background": "#22302D",
+          "titleBar.activeBackground": "#2F4440",
+          "titleBar.activeForeground": "#FAFBFB"
         }
     }

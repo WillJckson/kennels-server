@@ -13,3 +13,50 @@ good-names=i,
 [MESSAGES CONTROL]
 disable=broad-except,redefined-builtin,missing-module-docstring
 
+“python.linting.pylintArgs”: [“--disable={c0103}“]
+echo ‘[FORMAT]
+good-names=i,
+    j,
+    ex,
+    pk,
+    id,
+    do_PUT,
+    do_POST,
+    do_OPTIONS,
+    do_GET,
+    do_DELETE
+[MESSAGES CONTROL]
+disable=broad-except,redefined-builtin,missing-module-docstring
+’ > .pylintrc
+class NoParentClass:
+    def __init__(  # pylint: disable=too-many-arguments
+        self, arg_1, arg_2, arg_3, arg_4, arg_5, arg_6
+    ):
+        self.arg_1 = arg_1
+        self.arg_2 = arg_2
+        self.arg_3 = arg_3
+        self.arg_4 = arg_4
+        self.arg_5 = arg_5
+        self.arg_6 = arg_6
+class ChildOfObject(object):
+    def __init__(  # pylint: disable=too-many-arguments
+        self, arg_1, arg_2, arg_3, arg_4, arg_5, arg_6
+    ):
+        self.arg_1 = arg_1
+        self.arg_2 = arg_2
+        self.arg_3 = arg_3
+        self.arg_4 = arg_4
+        self.arg_5 = arg_5
+        self.arg_6 = arg_6
+class Base:
+    pass
+class ChildOfBass(Base):
+    def __init__(  # pylint: disable=too-many-arguments
+        self, arg_1, arg_2, arg_3, arg_4, arg_5, arg_6
+    ):
+        self.arg_1 = arg_1
+        self.arg_2 = arg_2
+        self.arg_3 = arg_3
+        self.arg_4 = arg_4
+        self.arg_5 = arg_5
+        self.arg_6 = arg_6
